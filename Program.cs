@@ -6,27 +6,16 @@ namespace InheritanceDemo
     {
         static void Main(string[] args)
         {
-            // Create instances of each class
-            Animal genericAnimal = new Animal();
-            Dog dog = new Dog();
-            Cat cat = new Cat();
+            // Create a Circle and display its area
+            Shape circle = new Circle(5.0);
+            Console.WriteLine($"Area of Circle with radius 5.0: {circle.GetArea():F2}");
 
-            // Call MakeSound on each instance
-            Console.WriteLine("Generic animal says: ");
-            genericAnimal.MakeSound();
-            
-            Console.WriteLine("\nDog says: ");
-            dog.MakeSound();
-            
-            Console.WriteLine("\nCat says: ");
-            cat.MakeSound();
-
-            // Demonstrate polymorphism
-            Console.WriteLine("\nDemonstrating polymorphism:");
-            Animal myPet = new Dog();
-            Console.Write("myPet (Animal reference to a Dog) says: ");
-            myPet.MakeSound();  // Calls Dog's MakeSound()
-
+            // Create a Rectangle and display its area
+            Shape rectangle = new Rectangle(4.0, 6.0);
+            Console.WriteLine($"Area of Rectangle 4.0 x 6.0: {rectangle.GetArea():F2}");
+        }
+    }
+}
             myPet = new Cat();
             Console.Write("Now myPet (Animal reference to a Cat) says: ");
             myPet.MakeSound();  // Calls Cat's MakeSound()
